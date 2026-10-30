@@ -1,0 +1,52 @@
+---
+layout: default
+priority: '0.8'
+root: ''
+title_html: Write a review | BusinessReviews.com
+desc_html: Share an honest, first-hand review of a business, software product or service provider.
+canonical: https://businessreviews.com/write-review.html
+search: Page
+search_title: Write a review
+search_desc: Share an honest, first-hand review of a business, software product or service provider.
+keywords: review submit rate
+---
+<section class="page-head"><div class="wrap"><h1>Write a review</h1><p class="lead">Share a first-hand experience with a business, software product or service provider. Every review is checked before it's published.</p></div></section>
+<section class="section" style="padding-top:36px"><div class="wrap layout"><div class="form-card">
+<form data-form="REVIEW submission" data-ok="Thank you. Your review is in the moderation queue — we'll email you when it's published or if we need anything." novalidate>
+<div style="display:flex;justify-content:space-between"><strong data-step-label>Step 1 of 3</strong><span class="muted" style="font-size:.9rem">About 3 minutes</span></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+<div class="step-pane"><h2>Which business are you reviewing?</h2>
+<div class="row"><div class="field"><label for="wr-biz">Business or product name</label><input id="wr-biz" type="text" name="business" required></div>
+<div class="field"><label for="wr-site">Website (optional)</label><input id="wr-site" type="url" name="website" placeholder="https://"></div></div>
+<div class="field"><label for="f-category">Category</label><select id="f-category" name="category" required><option value="">Choose…</option><option>CRM Software</option><option>Accounting &amp; Invoicing</option><option>Payroll &amp; HR</option><option>Project Management</option><option>Email Marketing</option><option>Website Builders &amp; Hosting</option><option>E-commerce Platforms</option><option>Payment Processing</option><option>Business Phone &amp; VoIP</option><option>Cybersecurity</option><option>Business Insurance</option><option>Business Loans &amp; Financing</option><option>Marketing Agencies</option><option>Web Design &amp; Development</option><option>IT &amp; Managed Services</option><option>Accountants &amp; Bookkeepers</option><option>Other</option></select></div>
+<div class="field"><label>Your overall rating</label><div class="rate-input" data-rate="reviewRating" role="group" aria-label="Overall rating"></div><div class="star-caption" aria-live="polite"></div><input type="hidden" id="reviewRating" name="rating" required></div>
+<div class="field"><label for="wr-title">Review title</label><input id="wr-title" type="text" name="title" required maxlength="100" placeholder="Sum up your experience in one line"></div>
+<div class="step-nav"><span></span><button class="btn btn-primary" type="button" data-next>Continue</button></div></div>
+
+<div class="step-pane"><h2>Tell us what happened</h2>
+<div class="field"><label for="wr-text">Your review</label><textarea id="wr-text" name="review" required minlength="100" placeholder="What did you buy or use? What went well, what didn't, and would you choose them again?"></textarea><div class="hint">At least 100 characters. Specific details help other buyers most.</div></div>
+<div class="row"><div class="field"><label for="wr-pros">What did you like?</label><textarea id="wr-pros" name="pros" style="min-height:90px"></textarea></div>
+<div class="field"><label for="wr-cons">What could be better?</label><textarea id="wr-cons" name="cons" style="min-height:90px"></textarea></div></div>
+<div class="row"><div class="field"><label for="wr-rating_value">Value for money</label><select id="wr-rating_value" name="rating_value"><option value="">Not applicable</option><option>5 – Excellent</option><option>4 – Great</option><option>3 – Average</option><option>2 – Poor</option><option>1 – Bad</option></select></div><div class="field"><label for="wr-rating_support">Customer support</label><select id="wr-rating_support" name="rating_support"><option value="">Not applicable</option><option>5 – Excellent</option><option>4 – Great</option><option>3 – Average</option><option>2 – Poor</option><option>1 – Bad</option></select></div></div>
+<div class="row"><div class="field"><label for="wr-rating_ease">Ease of use / working with them</label><select id="wr-rating_ease" name="rating_ease"><option value="">Not applicable</option><option>5 – Excellent</option><option>4 – Great</option><option>3 – Average</option><option>2 – Poor</option><option>1 – Bad</option></select></div><div class="field"><label for="wr-nps">How likely are you to recommend them? (0–10)</label><input id="wr-nps" type="number" min="0" max="10" name="recommend_0_10"></div></div>
+<div class="row"><div class="field"><label for="wr-date">Date of experience</label><input id="wr-date" type="date" name="date_of_experience" required></div>
+<div class="field"><label for="wr-dur">How long have you used them?</label><select id="wr-dur" name="usage_duration" required><option value="">Choose…</option><option>One-time purchase or project</option><option>Less than 6 months</option><option>6–12 months</option><option>1–2 years</option><option>More than 2 years</option><option>Free trial only</option></select></div></div>
+<div class="step-nav"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-primary" type="button" data-next>Continue</button></div></div>
+
+<div class="step-pane"><h2>About you</h2><p class="muted">Your email is never published. We use it to confirm your review.</p>
+<div class="row"><div class="field"><label for="wr-name">Display name</label><input id="wr-name" type="text" name="display_name" required placeholder="e.g. Priya S."></div>
+<div class="field"><label for="wr-email">Email</label><input id="wr-email" type="email" name="email" required autocomplete="email"></div></div>
+<div class="row"><div class="field"><label for="wr-role">Your role (optional)</label><input id="wr-role" type="text" name="role" placeholder="e.g. Operations manager"></div>
+<div class="field"><label for="wr-size">Company size (optional)</label><select id="wr-size" name="company_size"><option value="">Choose…</option><option>Just me</option><option>2–10</option><option>11–50</option><option>51–200</option><option>201–1,000</option><option>1,000+</option></select></div></div>
+<div class="field"><label for="wr-rel">Your relationship with this business</label><select id="wr-rel" name="relationship" required><option value="">Choose…</option><option>Current customer</option><option>Former customer</option><option>Trial user</option><option>Employee, owner or relative (not eligible to review)</option><option>Competitor (not eligible to review)</option></select></div>
+<div class="field"><label for="wr-inc">Did you receive anything for writing this review?</label><select id="wr-inc" name="incentive" required><option value="">Choose…</option><option>No</option><option>Yes — I was invited by the business</option><option>Yes — I received a gift, discount or payment (will be labelled Incentivized)</option></select></div>
+<div class="field"><label for="wr-proof">Order, invoice or account reference (optional, kept private)</label><input id="wr-proof" type="text" name="proof_reference"><div class="hint">Helps us apply the Verified label. Never published.</div></div>
+<label class="check" style="margin-bottom:10px"><input type="checkbox" name="confirm_genuine" value="yes" required> This review is based on my own genuine experience, and I've disclosed any relationship or incentive.</label>
+<label class="check"><input type="checkbox" name="agree_terms" value="yes" required> I agree to the <a href="review-guidelines.html" target="_blank">review guidelines</a> and <a href="terms.html" target="_blank">terms</a>, and grant BusinessReviews.com a licence to publish this review.</label>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="step-nav"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-gold" type="submit">Submit review for moderation</button></div></div>
+</form></div>
+<aside><div class="aside-stick">
+<div class="card"><h3>What makes a helpful review</h3><ul class="checks"><li>Specific: what you bought and when</li><li>Balanced: what worked and what didn't</li><li>Honest: your own experience only</li><li>Respectful: no personal attacks or private data</li></ul></div>
+<div class="card"><h3>Labels we apply</h3><p><span class="tag">Verified</span> proof of purchase or use checked</p><p><span class="tag blue">Invited</span> the business asked you to review</p><p><span class="tag gold">Incentivized</span> you received something of value</p><p style="margin:0"><a href="review-guidelines.html">Full guidelines</a></p></div>
+</div></aside></div></section>
