@@ -1,0 +1,8 @@
+<div class="form-card"><h3>Get matched for free</h3><p class="muted" style="font-size:.95rem">Answer three questions and get a vendor-neutral shortlist, typically within 2 business days.</p>
+<form data-form="Lead: Quick match ({{ qsrc | escape }})" data-ok="Request received. A shortlist is on its way within 2 business days.">
+<div class="field"><label for="ql-cat">What do you need?</label><select id="ql-cat" name="category" required><option value="">Choose…</option>{% for c in site.data.categories %}<option{% if c.name == qcat %} selected{% endif %}>{{ c.name | escape }}</option>{% endfor %}</select></div>
+<div class="field"><label for="ql-size">Company size</label><select id="ql-size" name="company_size" required><option value="">Choose…</option><option>Just me</option><option>2–10</option><option>11–50</option><option>51–200</option><option>201–1,000</option><option>1,000+</option></select></div>
+<div class="field"><label for="ql-email">Work email</label><input id="ql-email" type="email" name="email" required autocomplete="email"></div>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="check"><input type="checkbox" name="consent" value="yes" required> Contact me about this request.</label>
+<button class="btn btn-primary btn-block" style="margin-top:12px" type="submit">Get my shortlist</button>
+<p class="hint">Free for buyers. No obligation. <a href="{{ page.root }}privacy.html">Privacy</a></p></form></div>

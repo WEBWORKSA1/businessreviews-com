@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% for c in site.data.categories %}{% if c.slug == page.cat_slug %}{% assign cat = c %}{% endif %}{% endfor %}<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../categories.html">Categories</a> / {{ cat.name | escape }}</nav><h1>{{ cat.name | escape }} reviews &amp; buyer's guide</h1><p class="lead">{{ cat.blurb | escape }} What to look for, how pricing works and the questions to ask before you sign.</p></div></section>
+<section class="section"><div class="wrap layout"><article class="article">
+{% for p in cat.intro %}<p>{{ p | escape }}</p>{% endfor %}
+<h2 id="features">What to look for</h2><ul class="checks">{% for x in cat.features %}<li>{{ x | escape }}</li>{% endfor %}</ul>
+<h2 id="pricing">How pricing works</h2><ul>{% for x in cat.pricing %}<li>{{ x | escape }}</li>{% endfor %}</ul>
+<p class="muted">Model three-year cost with our <a href="../tools.html#tco">total cost of ownership calculator</a>.</p>
+{% if cat.providers.size > 0 %}<h2 id="providers">Commonly evaluated {{ cat.name | escape }} providers</h2>
+<p class="muted">Selected by our editors as a starting point — not ranked, and not paid placements. Ratings appear only after genuine reviews pass moderation.</p>
+<div class="card">{% for pv in cat.providers %}<div class="prov"><div><h3>{{ pv.name | escape }}</h3><div class="muted"><span class="stars" aria-label="No ratings yet"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span> No verified reviews yet</div></div>
+<div class="prov-actions"><a class="btn btn-ghost btn-sm" href="../write-review.html?business={{ pv.name | escape }}&amp;category={{ cat.name | escape }}">Write the first review</a><a class="btn btn-ghost btn-sm" href="{{ pv.url }}" target="_blank" rel="nofollow noopener">Visit site</a></div></div>{% endfor %}</div>{% else %}<h2 id="providers">Providers in this category</h2>
+<div class="notice"><strong>Profiles are opening now.</strong> Firms can <a href="../for-business.html?category={{ cat.name | escape }}">claim a free profile</a>, and clients can <a href="../write-review.html?category={{ cat.name | escape }}">review a provider they've hired</a>. Need options today? <a href="../get-quotes.html?category={{ cat.name | escape }}">Request matched proposals</a>.</div>{% endif %}
+<h2 id="questions">Questions to ask every vendor</h2><ol>{% for x in cat.questions %}<li>{{ x | escape }}</li>{% endfor %}</ol>
+<h2 id="red-flags">Red flags</h2><ul>{% for x in cat.red_flags %}<li>{{ x | escape }}</li>{% endfor %}</ul>
+<h2 id="faq">Frequently asked questions</h2>{% for f in cat.faqs %}<details><summary>{{ f.q | escape }}</summary><div>{{ f.a | escape }}</div></details>{% endfor %}
+<h2>Related guides</h2><ul>{% for g in cat.rel %}<li><a href="../guides/{{ g.slug }}.html">{{ g.title | escape }}</a></li>{% endfor %}</ul>
+<p class="muted" style="font-size:.9rem;margin-top:2em">Editorial content written by the BusinessReviews.com team following our <a href="../editorial-policy.html">editorial policy</a>. Vendor names are trademarks of their owners. Verify current pricing and features with each vendor.</p>
+</article>
+<aside><div class="aside-stick">{% assign qcat = cat.name %}{% assign qsrc = cat.name %}{% include quick_lead.html %}
+<div class="card toc"><h4>On this page</h4><a href="#features">What to look for</a><a href="#pricing">Pricing</a><a href="#providers">Providers</a><a href="#questions">Questions to ask</a><a href="#red-flags">Red flags</a><a href="#faq">FAQ</a></div>
+<div class="card"><h4>Used one of these?</h4><p class="muted" style="font-size:.95rem">Your honest review helps the next buyer avoid an expensive mistake.</p><a class="btn btn-gold btn-block" href="../write-review.html?category={{ cat.name | escape }}">Write a review</a></div>
+</div></aside></div></section>

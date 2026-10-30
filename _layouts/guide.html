@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="section" style="padding-top:36px"><div class="wrap layout"><article class="article">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../guides/index.html">Guides</a> / {{ page.topic | escape }}</nav>
+<h1 style="font-size:clamp(2rem,4vw,3rem)">{{ page.headline | escape }}</h1>
+<p class="lead">{{ page.summary | escape }}</p>
+<div class="byline"><span>By the BusinessReviews.com editorial team</span><span>Updated <time datetime="{{ page.updated }}">{{ page.updated }}</time></span><span>{{ page.minutes }} min read</span></div>
+{{ content }}
+<div class="lead-band" style="margin-top:40px"><div><h2>Shopping for a tool or provider?</h2><p>Get a free, vendor-neutral shortlist matched to your size, budget and timeline.</p></div><div><a class="btn btn-gold" href="../get-quotes.html">Get free quotes</a></div></div>
+</article>
+<aside><div class="aside-stick"><div class="card toc"><h4>In this guide</h4>{{ page.toc_html }}</div>{% assign qcat = "" %}{% assign qsrc = "Guide: " | append: page.guide_slug %}{% include quick_lead.html %}</div></aside>
+</div></section>

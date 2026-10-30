@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-root="{{ page.root }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title_html }}</title>
+<meta name="description" content="{{ page.desc_html }}">
+{% if page.noindex %}<meta name="robots" content="noindex">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+<link rel="canonical" href="{{ page.canonical }}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="BusinessReviews.com">
+<meta property="og:title" content="{{ page.title_html }}"><meta property="og:description" content="{{ page.desc_html }}"><meta property="og:url" content="{{ page.canonical }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12213A">
+<meta name="google-adsense-account" content="ca-pub-6620975821265271">
+<link rel="icon" href="{{ page.root }}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ page.root }}site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Public+Sans:ital,wght@0,400;0,550;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ page.root }}assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "BusinessReviews.com", "url": "https://businessreviews.com", "logo": "https://businessreviews.com/assets/img/favicon.svg"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "BusinessReviews.com", "url": "https://businessreviews.com", "potentialAction": {"@type": "SearchAction", "target": "https://businessreviews.com/search.html?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>{{ page.ld }}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-head"><div class="wrap head-in">
+<a class="brand" href="{{ page.root }}index.html" aria-label="BusinessReviews.com home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="4" width="36" height="28" rx="9" fill="#12213A"/><path d="M12 32l-2 6 8-6z" fill="#12213A"/><path d="M20 9.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.8L20 22.6l-5.3 2.9 1.2-5.8-4.4-4.1 5.9-.7z" fill="#F4A300"/></svg><span>BusinessReviews<span class="tld">.com</span></span></a>
+<nav class="nav" id="nav" aria-label="Main"><a href="{{ page.root }}categories.html"{% if page.active == "categories.html" %} aria-current="page"{% endif %}>Categories</a><a href="{{ page.root }}guides/index.html"{% if page.active == "guides/index.html" %} aria-current="page"{% endif %}>Guides</a><a href="{{ page.root }}tools.html"{% if page.active == "tools.html" %} aria-current="page"{% endif %}>Tools</a><a href="{{ page.root }}for-business.html"{% if page.active == "for-business.html" %} aria-current="page"{% endif %}>For business</a><a href="{{ page.root }}contests.html"{% if page.active == "contests.html" %} aria-current="page"{% endif %}>Contests</a><a href="{{ page.root }}donate.html"{% if page.active == "donate.html" %} aria-current="page"{% endif %}>Support us</a><a href="{{ page.root }}videos.html" class="mob-only" style="color:inherit;font-weight:550">Videos</a><a href="{{ page.root }}write-review.html" class="mob-only">Write a review</a><a href="{{ page.root }}get-quotes.html" class="mob-only">Get free quotes</a></nav>
+<div class="head-actions">
+<a class="icon-btn" href="{{ page.root }}search.html" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a>
+<button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></button>
+<a class="btn btn-ghost btn-sm" href="{{ page.root }}write-review.html">Write a review</a>
+<a class="btn btn-primary btn-sm" href="{{ page.root }}get-quotes.html">Get free quotes</a>
+<button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></div></header>
+<div class="scrim" id="scrim"></div>
+<main id="main">
+{{ content }}
+</main>
+<footer class="site-foot"><div class="wrap">
+<div class="foot-grid">
+<div><a class="brand" href="{{ page.root }}index.html" style="color:#fff"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="4" width="36" height="28" rx="9" fill="#12213A"/><path d="M12 32l-2 6 8-6z" fill="#12213A"/><path d="M20 9.5l2.6 5.4 5.9.7-4.4 4.1 1.2 5.8L20 22.6l-5.3 2.9 1.2-5.8-4.4-4.1 5.9-.7z" fill="#F4A300"/></svg><span>BusinessReviews<span class="tld" style="color:#93A0B8">.com</span></span></a>
+<p style="margin-top:14px;max-width:34ch">Independent reviews, buyer's guides and free tools for choosing business software and service providers.</p>
+<form data-form="Newsletter signup" data-ok="You're subscribed. Look out for our next buyer's brief." class="news" aria-label="Newsletter">
+<label class="sr" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" placeholder="Your work email" required>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn btn-gold btn-sm" type="submit">Subscribe</button></form>
+<p class="hint" style="color:#93A0B8">Monthly buyer's brief. Unsubscribe any time.</p></div>
+<div><h4>Explore</h4><ul><li><a href="{{ page.root }}categories.html">All categories</a></li><li><a href="{{ page.root }}guides/index.html">Buyer's guides</a></li><li><a href="{{ page.root }}tools.html">Free tools</a></li><li><a href="{{ page.root }}videos.html">Videos</a></li><li><a href="{{ page.root }}awards.html">Community Choice Awards</a></li><li><a href="{{ page.root }}search.html">Search</a></li></ul></div>
+<div><h4>For businesses</h4><ul><li><a href="{{ page.root }}for-business.html">Claim your profile</a></li><li><a href="{{ page.root }}get-quotes.html">Get free quotes</a></li><li><a href="{{ page.root }}advertise.html">Advertise &amp; sponsor</a></li><li><a href="{{ page.root }}review-guidelines.html">Review guidelines</a></li><li><a href="https://web.works/contact" target="_blank" rel="noopener">Partnerships</a></li></ul></div>
+<div><h4>Community</h4><ul><li><a href="{{ page.root }}write-review.html">Write a review</a></li><li><a href="{{ page.root }}contests.html">Contests &amp; prizes</a></li><li><a href="{{ page.root }}careers.html">Careers</a></li><li><a href="{{ page.root }}donate.html">Support us</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="{{ page.root }}about.html">About</a></li><li><a href="{{ page.root }}editorial-policy.html">Methodology &amp; editorial policy</a></li><li><a href="{{ page.root }}contact.html">Contact</a></li><li><a href="{{ page.root }}privacy.html">Privacy policy</a></li><li><a href="{{ page.root }}terms.html">Terms of use</a></li><li><a href="{{ page.root }}cookies.html">Cookie policy</a></li><li><a href="{{ page.root }}disclaimer.html">Disclaimer &amp; disclosures</a></li><li><a href="{{ page.root }}trademark-copyright.html">Trademark &amp; copyright</a></li></ul></div>
+</div>
+<div class="foot-legal">
+<p>© <span data-year>2026</span> BusinessReviews.com. Original content on this site is protected by copyright. "Business reviews" is used as a generic, descriptive phrase; no exclusive trademark rights are claimed in it, and this site is not affiliated with any other company or service using similar words. Third-party names and marks belong to their owners and are used for identification only. <a href="{{ page.root }}trademark-copyright.html">Full disclosure</a>.</p>
+<p>Reviews reflect the opinions of individual reviewers, not BusinessReviews.com. This site displays advertising served by Google AdSense. <a href="{{ page.root }}disclaimer.html">How we make money</a>.</p>
+</div>
+</div></footer>
+<a class="btn btn-gold sticky-cta" id="stickyCta" href="{{ page.root }}get-quotes.html">Get matched free</a>
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="lmTitle"><div class="form-card">
+<button class="icon-btn x" type="button" data-close aria-label="Close">✕</button>
+<h3 id="lmTitle">Before you go: get a free shortlist</h3>
+<p class="muted">Tell us what you're shopping for and we'll email you a vendor-neutral shortlist with questions to ask.</p>
+<form data-form="Lead: Exit shortlist" data-ok="Done — your shortlist request is in. Check your inbox within 2 business days.">
+<div class="field"><label for="lm-cat">Category</label><select id="lm-cat" name="category" required><option value="">Choose…</option><option>CRM Software</option><option>Accounting &amp; Invoicing</option><option>Payroll &amp; HR</option><option>Project Management</option><option>Email Marketing</option><option>Website Builders &amp; Hosting</option><option>E-commerce Platforms</option><option>Payment Processing</option><option>Business Phone &amp; VoIP</option><option>Cybersecurity</option><option>Business Insurance</option><option>Business Loans &amp; Financing</option><option>Marketing Agencies</option><option>Web Design &amp; Development</option><option>IT &amp; Managed Services</option><option>Accountants &amp; Bookkeepers</option></select></div>
+<div class="field"><label for="lm-email">Work email</label><input id="lm-email" type="email" name="email" required autocomplete="email"></div>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted about my request. <a href="{{ page.root }}privacy.html">Privacy</a></label>
+<button class="btn btn-primary btn-block" type="submit" style="margin-top:14px">Send my shortlist</button></form>
+</div></div>
+<div class="cookie" id="cookie" role="region" aria-label="Cookie notice">
+<p>We use cookies for essential site functions and, with Google AdSense, to show and measure ads. Read our <a href="{{ page.root }}cookies.html">cookie policy</a>.</p>
+<div class="btns"><button class="btn btn-primary btn-sm" data-consent="all">Accept all</button><button class="btn btn-ghost btn-sm" data-consent="essential">Essential only</button></div></div>
+<script src="{{ page.root }}assets/js/main.js" defer></script>
+{{ page.scripts_html }}
+</body>
+</html>

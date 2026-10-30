@@ -1,0 +1,8 @@
+title: BusinessReviews.com
+url: https://businessreviews.com
+exclude:
+  - build
+  - docs
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -6,7 +6,8 @@ A moderated review and buyer's-guide hub for business software, finance products
 
 | Path | Purpose |
 |---|---|
-| `index.html` and other root `*.html` | Generated pages, served by GitHub Pages from `main` / root |
+| `index.html` and other root `*.html` | Page sources (front matter + body), built by GitHub Pages' Jekyll from `main` / root |
+| `_layouts/`, `_includes/`, `_data/categories.yml` | Shared page chrome, the quick-match form, and category data |
 | `categories/` | 16 category buyer's guides |
 | `guides/` | Editorial guides |
 | `assets/css/style.css` | Design system: light and dark themes, responsive |
@@ -18,9 +19,15 @@ A moderated review and buyer's-guide hub for business software, finance products
 
 ## Edit and rebuild
 
+Content lives in `build/*.py`. After editing, regenerate the Jekyll sources and commit:
+
 ```bash
-python3 build/build.py   # regenerates every HTML page, sitemap.xml and search-index.json
+pip install pyyaml
+python3 build/export_jekyll.py .                   # regenerates pages, layouts, _data
+python3 build/export_jekyll.py --preview _preview  # optional plain-HTML preview (gitignored)
 ```
+
+GitHub Pages builds the final HTML, `sitemap.xml` and `search-index.json` with Jekyll on every push to `main`. No Actions workflow is needed. Don't run `build/build.py` directly in the repo root; use the preview flag.
 
 - **New category:** add a dict to `build/categories.py`.
 - **New guide:** add a dict to `build/guides.py`.
@@ -36,7 +43,7 @@ To show "Give by card / PayPal / Ko-fi" buttons, set the links in `DONATE_LINKS`
 
 ## Deployment
 
-1. Go to **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, then **main** and **/ (root)**.
+1. Go to **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, then **main** and **/ (root)**. GitHub's built-in Jekyll build publishes the site at `https://webworksa1.github.io/businessreviews-com/`.
 2. To use the custom domain, add a `CNAME` file containing `businessreviews.com` and point DNS to GitHub Pages:
    - A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - or a CNAME for `www` to `webworksa1.github.io`
